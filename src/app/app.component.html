@@ -1,0 +1,17 @@
+<body>
+  <button class="btn btn-primary"
+  (click) = "toggle()">
+  Display Details</button>
+  
+  <h1 *ngIf = "showText; else: password">{{ text }}</h1>
+  <ng-template #password>
+    <h1>
+      tuna
+    </h1>
+  </ng-template>
+  <p
+  *ngFor = "let start of counterArray"
+  [ngStyle] = "{backgroundColor: start >= 5 ? 'blue' : 'green'}"
+  >
+    The log value is {{ start }}</p>
+</body>
